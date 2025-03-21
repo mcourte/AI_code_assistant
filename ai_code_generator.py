@@ -1,13 +1,12 @@
 import google.generativeai as genai
 
 # Clé API par défaut (remplace par la tienne)
-DEFAULT_API_KEY = "AIzaSyBzmGVWz4zoLmDIGzSId0-gdEiz7dD2TvQ"
 
 # Demande à l'utilisateur d'entrer sa clé API (optionnel)
-user_api_key = input("🔑 Entrez votre API Key Google (ou appuyez sur Entrée pour utiliser la clé par défaut) : ").strip()
+user_api_key = input("🔑 Entrez votre API Key Google : ").strip()
 
 # Utilisation de la clé API fournie ou de la clé par défaut
-API_KEY = user_api_key if user_api_key else DEFAULT_API_KEY
+API_KEY = user_api_key
 genai.configure(api_key=API_KEY)
 
 
